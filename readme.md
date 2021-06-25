@@ -1,4 +1,2 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://Aleksandr3012.github.io/ChatFood/public>
+1. <https://Aleksandr3012.github.io/ChatFood/public/modal.html>
