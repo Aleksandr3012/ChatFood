@@ -1,0 +1,23 @@
+mixin sForm()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span.text-primary Подключите свой ресторан] к&nbsp;чат-боту на&nbsp;платформе ChatFood
+				h5 Станьте одним из&nbsp;первых, кто внедрит чат-бота с&nbsp;приемом платежей в&nbsp;свой ресторан на&nbsp;выгодных условиях.
+			+form-wrap 
+				.text-center
+					h4 Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+				.row 
+					.col-md-6
+						+input('Ваше имя')
+					.col-md-6
+						+input('Укажите ваш город')
+					.col-md-6
+						+input('Ваш телефон','tel')
+					.col-md-6
+						+input('Название ресторана')
+				.text-center
+					+e.btn.btn.btn-primary(type="submit") Отправить заявку
+					+polite
+	// end sForm

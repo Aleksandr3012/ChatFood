@@ -1,0 +1,17 @@
+mixin sHowItWorks(data)
+	// start sHowItWorks
+	+b.SECTION.sHowItWorks.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2!= data.title
+			block
+	// end sHowItWorks
+
+mixin workCard(num,i,title,text)
+	.col-md-6
+		+e.card 
+			+pic(`step-${i}.png`,'','')
+			h4!= title 
+			p!= text 
+			+e.num 
+				img.res-i(src=`img/svg/${num}.svg`, alt="" loading="lazy")

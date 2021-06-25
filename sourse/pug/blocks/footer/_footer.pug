@@ -1,0 +1,22 @@
+mixin footer()
+	+b.FOOTER.footer#footer
+		.container 
+			.row 
+				.col-md-auto.order-1 
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="Логотип" loading="lazy")
+				+e.col.col-md-4.col-lg-6.col-xl-7.order-2
+					+e.tel(href="tel:88006007047") 8 800 600-70-47
+					+e.mail(href="mailto:info@chatfood.ru") info@chatfood.ru
+					
+				+e.rCol.col-md.order-1.order-md-2
+					+e.btnWrap
+						+connect
+				+e.lCol.col-md-auto.order-last
+						+e.partner(href="#" target="_blank") Партнерская программа
+						p © #[span.year ] ChatFood.ru
+				+e.col.col-md-4.col-lg-6.col-xl-7.order-2.order-md-last
+					+soc
+				+e.rCol.col-md.order-last
+					+e.link(href="#") Договор-оферта
+					+e.link(href="#") Пользовательское соглашение

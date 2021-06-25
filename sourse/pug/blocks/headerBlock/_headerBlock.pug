@@ -1,0 +1,18 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			.row.align-items-center
+				.col-lg-6
+					+b.section-title
+						h1 #[span.text-primary Чат-бот в&nbsp;телеграме] для ресторанов с&nbsp;приемом платежей
+						h5 Разместите меню ресторана в&nbsp;чат-боте и&nbsp;принимайте заказы на доставку с&nbsp;одного из&nbsp;самых популярных мессенджеров.
+					a.btn.btn-primary(href="#" target="_blank") Подключить ресторан
+				.col-lg 
+					+e.imgWrap
+						+pic('iphone.png','','')
+						+e.spinImg 
+							img.res-i(src="img/svg/food-icons.svg", alt="" loading="lazy")
+			
+						
+	// end headerBlock

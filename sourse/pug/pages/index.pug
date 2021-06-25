@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sHowItWorks/_sHowItWorks.pug
+include ../blocks/sBox/_sBox.pug
+include ../blocks/sAnswers/_sAnswers.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'ChatFood'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock()
+	+sOpportunities()
+	+sHowItWorks({
+		title: `<span class="text-primary"> Как работает</span> чат-бот?`
+	})#sHowItWorks
+		.row
+			+workCard('1','1',`Посетитель ресторана регистрируется в чат-боте по&nbsp;QR-коду`,`Ваш клиент получает за&nbsp;регистрацию бонусные баллы, которые может тратить при заказе доставки еды из&nbsp;вашего ресторана, а&nbsp;также накапливать новые баллы.`)
+			+workCard('2','2',`Клиент заказывает доставку блюд из&nbsp;вашего ресторана через чат-бота`,`А&nbsp;также может ознакомиться с&nbsp;акциями ресторана, забронировать стол и&nbsp;получать от&nbsp;вас сообщения.`)
+			+workCard('3','3',`Вы&nbsp;получаете заказы в&nbsp;CRM-системе на&nbsp;компьютере или планшете`,`После чего формируете заказ и&nbsp;передаете его в&nbsp;доставку, а&nbsp;ваш клиент получает свой заказ. Оплату за&nbsp;заказ вы&nbsp;получаете на&nbsp;расчетный счет или наличными курьеру.`)
+			+workCard('4','4',`Пользователь чат-бота приглашает друзей и&nbsp;знакомых`,`Ваш клиент приглашает друзей и&nbsp;знакомых в&nbsp;чат-бота по&nbsp;своей реферальной ссылке и&nbsp;получает за&nbsp;это бонусные баллы, приглашенный пользователь также получает бонусы.`)
+	+sBox()
+	+sHowItWorks({
+		title: `<span class="text-primary"> Как подключить</span> ресторан?`
+	})#sHowConnect
+		.row
+			+workCard('1','5',`1 день`,`Оставляете заявку, мы&nbsp;свяжемся с&nbsp;Вами и&nbsp;запросим необходимую информацию для создания чат-бота, подпишем договор.`)
+			+workCard('2','6',`3-5 дней`,`Создаем чат-бота и&nbsp;подключаем к&nbsp;платформе ChatFood, заполняем меню и&nbsp;прочую информацию в&nbsp;чат-боте.`)
+			+workCard('3','7',`2-3 дня`,`Доставляем вам CF&nbsp;BOX и&nbsp;предоставляем доступ в&nbsp;ChatFood CRM для управления заказами.`)
+			+workCard('4','8',`1 день`,`Вы&nbsp;размещаете рекламную информацию чат-бота в&nbsp;своем ресторане и&nbsp;получаете первые заказы.`)
+		+e.btnWrap 
+			a.btn.btn-primary(href="#" target="_blank") Подключить ресторан
+	+sAnswers()
+	+sForm()
+	+footer()
+
+
+
+

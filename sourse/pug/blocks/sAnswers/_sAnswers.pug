@@ -1,0 +1,23 @@
+mixin sAnswers(data)
+	// start sAnswers
+	+b.SECTION.sAnswers.section#sAnswers&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span.text-primary Ответы] на вопросы
+				
+			+e.accardionWrap
+				mixin accardion(t)
+					+b.accordion-item
+						+e.head--js!= t 
+							+icon('chevron-down')
+						+e.content 
+							p t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+				+accardion('Кто будет доставлять заказы?')
+				+accardion('Какие условия подключения ресторана к чат-боту на платформе ChatFood?')
+				+accardion('Как мы будем узнавать о новых заказах?')
+				+accardion('Что делать, если закончились продукты для каких-либо блюд?')
+				+accardion('Как изменить меню, цены, данные о ресторане после запуска чат-бота?')
+				+accardion('Где и как принимать новые заказы?')
+			.text-center
+				+e.btn.btn.btn-primary(href="#") Задать свой вопрос
+	// end sAnswers

@@ -1,0 +1,42 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js.on
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.align-items-center
+				.col.col-xl-auto 
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col.d-none.d-xl-block
+					+mnu()
+				.col-auto 
+					+connect
+
+
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+	// end top-nav
+
+
+mixin connect
+	+b.connect.btn.btn-secondary(href="#" target="_blank")
+		+icon('tg')
+		span Подключить

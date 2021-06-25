@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sHowItWorks/_sHowItWorks.pug
+include ../blocks/sBox/_sBox.pug
+include ../blocks/sAnswers/_sAnswers.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'ChatFood'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+	.section
+		.container.pt-4.mt-4
+			a.btn.btn-primary.link-modal-js(href="#modal-thanks") Спасибо
+	+footer()
+
+
+
+

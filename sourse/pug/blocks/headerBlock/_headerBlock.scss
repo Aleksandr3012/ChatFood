@@ -1,0 +1,76 @@
+// start .headerBlock
+.headerBlock {
+	--sPT: #{rem(60)};
+	--sTPB: #{rem(33)};
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(80)};
+	}
+
+	padding-top: calc(var(--sPT) + var(--header-height));
+
+	overflow: hidden;
+
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
+	h1, .h1 {
+		font-weight: bold;
+		line-height: 125%;
+
+		.text-primary {
+			display: block;
+		}
+	}
+
+	.section-title {
+		@include media-breakpoint-down(md) {
+			max-width: 520px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	h5, .h5 {
+		line-height: 175%;
+	}
+
+
+	&__imgWrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(60);
+		}
+	}
+
+	&__spinImg {
+		position: absolute;
+		top: 0px;
+		z-index: -1;
+
+		img {
+			animation: spin 20s linear infinite;
+			// animation: spin 20s ease-in-out infinite;
+		}
+	}
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {}
+
+}
+// end.headerBlock
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

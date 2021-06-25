@@ -1,0 +1,71 @@
+// start .sAnswers
+.sAnswers {
+
+	--sPT: #{rem(35)};
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(62)};
+	}
+	// --sPB: ;
+	// --sTPB: ;
+
+	h2, .h2 {
+		margin-bottom: 0;
+	}
+	
+
+	.container {
+		@include media-breakpoint-up(lg) {
+			max-width: 810px;
+		}
+	}
+
+
+	&__accardionWrap {
+		padding-bottom: rem(57);
+	}
+
+	.accordion-item {
+		&:first-child {
+			border-top: solid 1px $input-border-color;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAnswers
+
+.accordion-item {
+	border-bottom: solid 1px $input-border-color;
+
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: var(--h5-font-size);
+		cursor: pointer;
+		padding: rem(26) 0;
+
+		.icon {
+			font-size: rem(11);
+			margin-left: rem(25);
+			@include mt;
+		}
+	}
+	&__content {
+		padding-bottom: rem(20);
+		display: none;
+	}
+
+	&.active {
+		.accordion-item__head {
+
+			.icon {
+				transform: rotate(180deg);
+				color: $primary;
+			}
+		}
+	}
+}

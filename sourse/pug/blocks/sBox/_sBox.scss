@@ -1,0 +1,62 @@
+// start .sBox
+.sBox {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	.section-title {
+		max-width: 980px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h5, .h5 {
+		line-height: 175%;
+		// margin-bottom: 0;
+	}
+
+	h2, .h2 {
+		.text-primary {
+			display: inline-block;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin-bottom: 0;
+
+		li {
+			position: relative;
+			padding-left: rem(15);
+			line-height: 175%;
+			
+			&:not(:last-child) {
+				padding-bottom: rem(20);
+			}
+
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 10px;
+				width: 5px;
+				height: 5px;
+				background: $primary;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	&__imgWrap {
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(40);
+		}
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBox

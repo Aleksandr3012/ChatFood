@@ -1,0 +1,53 @@
+.menu{
+	display: flex;
+	list-style: none;
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+	@include media-breakpoint-up(xl) {
+		justify-content: center;
+	}
+	@include media-breakpoint-down(xl) {
+		flex-direction: column;
+	}
+	li{
+		padding: 0 rem(10);
+	}
+	a{
+		display: block;
+		@include media-breakpoint-up(xl) {
+			text-align: center;
+			padding: rem(22) rem(0);
+		}
+		position: relative;
+		text-decoration: none;
+		color: #142630;
+		@include media-breakpoint-down(xl) {
+			font-size: rem(40);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $primary;
+			opacity: 0;
+			transform: scale(0);
+			@include mt;
+		}
+
+		&:hover {
+			color: $primary;
+
+			&::before {
+				@include media-breakpoint-up(xl) {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

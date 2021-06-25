@@ -1,0 +1,42 @@
+ 
+	  
+.soc{
+	@include roww(5px, m);
+	display: flex;
+	&__item{
+		text-decoration: none !important; 
+		vertical-align: middle;
+		@include mt;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+
+		
+	}
+	.icon{
+		font-size: rem(17);
+		color: #fff;
+	}
+
+	.icon-telegram {
+		// font-size: rem(15);
+		margin-right: rem(2);
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+
