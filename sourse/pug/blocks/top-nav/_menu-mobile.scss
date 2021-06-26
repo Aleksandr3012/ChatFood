@@ -79,7 +79,7 @@ $h: rem(2);
 .menu-mobile {
 	position: fixed !important;
 	z-index: 999;
-	max-width: 85%;
+	max-width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
 	width: 500px;
 	@include media-breakpoint-up(sm) {
@@ -117,12 +117,10 @@ $h: rem(2);
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: -10%;
 		position: absolute;
 		opacity: 0;
-		left: 0;
-		right: auto;
-		color: #FFF;
+		right: 20px;
+		color: $input-border-color;
 		top: 20px;
 		z-index: 9999;
 		background-color: transparent;
@@ -130,7 +128,7 @@ $h: rem(2);
 		span,
 		span:after,
 		span:before {
-			background-color: #FFF;
+			background-color: $input-border-color;
 		}
 
 		&.on {
