@@ -79,7 +79,7 @@ $h: rem(2);
 .menu-mobile {
 	position: fixed !important;
 	z-index: 999;
-	// max-width: 85%;
+	max-width: 85%;
 	height: calc(var(--vh, 1vh) * 100);
 	width: 500px;
 	@include media-breakpoint-up(sm) {

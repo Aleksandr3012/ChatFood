@@ -492,6 +492,7 @@ iframe {
 	font-weight: bold;
 	font-size: var(--h5-font-size);
 	min-width: rem(254);
+	box-shadow: none !important;
 
 	&:hover {
 		background-color: #12B0F3;

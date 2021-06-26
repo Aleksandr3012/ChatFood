@@ -66,7 +66,7 @@ const JSCCommon = {
 		const toggle = this.btnToggleMenuMobile;
 		const menu = this.menuMobile;
 		document.addEventListener("click", function (event) {
-			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
+			const toggleEv = event.target.closest(".toggle-menu-mobile--js,  .menu .menu-item a");
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
