@@ -67,7 +67,7 @@ const JSCCommon = {
 		const toggle = this.btnToggleMenuMobile;
 		const menu = this.menuMobile;
 		document.addEventListener("click", function (event) {
-			const toggleEv = event.target.closest(".toggle-menu-mobile--js,  .menu .menu-item a");
+			const toggleEv = event.target.closest(".toggle-menu-mobile--js, .menu-mobile .menu .menu-item a");
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
@@ -172,9 +172,7 @@ function eventHandler() {
 	whenResize();
 
 	$('.accordion-item__head--js').click(function () {
-		$(this).next().slideToggle(function () {
-			$(this).parent().toggleClass("active");
-		})
+		$(this).parent().toggleClass("active").find('.accordion-item__content--js').slideToggle();
 	})
 
 	// modal window

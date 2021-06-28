@@ -51,7 +51,7 @@
 		.icon {
 			font-size: rem(11);
 			margin-left: rem(25);
-			@include mt;
+			@include mt(.2s);
 		}
 	}
 	&__content {

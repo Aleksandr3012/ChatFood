@@ -38,6 +38,12 @@
 			height: calc(100% - #{rem(20)});
 			margin-bottom: rem(20);
 		}
+		@include mt;
+		will-change: transform;
+
+		&:hover {
+			transform: scale(1.04);
+		}
 	}
 
 	&__num {
