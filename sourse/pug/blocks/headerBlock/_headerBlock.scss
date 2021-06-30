@@ -5,7 +5,9 @@
 	@include media-breakpoint-up(xl) {
 		--sPT: #{rem(80)};
 	}
-
+	@media (min-width: 992px) and (max-width: 1370px) {
+		--sPT: #{rem(20)};
+	}
 	padding-top: calc(var(--sPT) + var(--header-height));
 
 	overflow: hidden;

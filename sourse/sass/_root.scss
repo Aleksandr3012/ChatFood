@@ -8,6 +8,11 @@
 		--sPB: #{rem(40)};
 		--sTPB: #{rem(60)};
 	}
+
+	@media (min-width: 1200px) and (max-width: 1370px) {
+		--sPT: #{rem(20)};
+		--sPB: #{rem(20)};
+	}
 	--sTPB: #{rem(40)};
 	--sPT: #{rem(30)};
 	--sPB: #{rem(30)};
