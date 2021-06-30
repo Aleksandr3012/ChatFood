@@ -6,7 +6,7 @@
 		--sPT: #{rem(80)};
 	}
 	@media (min-width: 992px) and (max-width: 1370px) {
-		--sPT: #{rem(20)};
+		--sPT: #{rem(40)};
 	}
 	padding-top: calc(var(--sPT) + var(--header-height));
 
@@ -59,11 +59,12 @@
 
 	&__spinImg {
 		position: absolute;
-		top: 0px;
-		@media (min-width: 992px) and (max-width: 1370px) {
-			top: -20px;
-		}
 		z-index: -1;
+		top: 25px;
+
+		@media (min-width: 992px) and (max-width: 1370px) {
+			max-width: 410px;
+		}
 
 		img {
 			animation: spin 50s linear infinite;
