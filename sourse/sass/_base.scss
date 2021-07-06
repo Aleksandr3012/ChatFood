@@ -493,8 +493,17 @@ iframe {
 	font-size: var(--h5-font-size);
 	min-width: rem(254);
 	box-shadow: none !important;
-
+	
 	&:hover {
 		background-color: #12B0F3;
 	}
+}
+
+.btn-outline-primary {
+	&:hover {
+		color: #fff;
+	}
+	border-width: 2px;
+	border-radius: $border-radius-lg;
+	font-weight: bold;
 }

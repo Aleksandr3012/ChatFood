@@ -38,6 +38,23 @@
 		line-height: 175%;
 	}
 
+	&__btnWrap {
+		display: flex;
+		@include roww(20px, m);
+		@include media-breakpoint-only(lg) {
+			@include roww(16px, m);
+
+		}
+		@include media-breakpoint-down(lg) {
+			justify-content: center;
+		}
+
+		.btn {
+			white-space: nowrap;
+		}
+
+	}
+
 
 	&__imgWrap {
 		position: relative;
